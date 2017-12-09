@@ -21,8 +21,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
 
 var options = {
-    'position': { 'bottom': 0, 'right': 0 },
-    'precision': 5
+    position: { bottom: 0, right: 0 },
+    precision: 5,
+    style: {
+        padding: '0 5px',
+        backgroundColor: 'rgba(255,255,255,0.7)',
+        fontSize: '13px'
+    }
 };
 
 var MouseCoordinate = function (_maptalks$control$Con) {
@@ -37,9 +42,7 @@ var MouseCoordinate = function (_maptalks$control$Con) {
     MouseCoordinate.prototype.buildOn = function buildOn(map) {
         var dom = document.createElement('div');
 
-        dom.style.padding = "0 5px";
-        dom.style.backgroundColor = 'rgba(255,255,255,0.7)';
-        dom.style.fontSize = '13px';
+        Object.assign(dom.style, this.options.style);
 
         return dom;
     };
