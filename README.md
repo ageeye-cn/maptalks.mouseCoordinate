@@ -1,6 +1,8 @@
-# maptalks-hash
+# maptalks-mouseCoordinate
 
-Add URL hashes to web pages with maptalks
+A mouse coordinate plugin for [maptalks](http://maptalks.org/).
+
+[demo](https://ageeye-cn.github.io/maptalks.mouseCoordinate//demo/index.html)
 
 # Getting started
 
